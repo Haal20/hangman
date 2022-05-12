@@ -39,7 +39,7 @@ class Hangman extends React.Component {
         this.getWord = this.getWord.bind(this)
     }
 
-    /* GET WORD DATA */
+    /* GET RANDOM WORD */
     async getWord() {
         const res = await axios('https://random-word-form.herokuapp.com/random/animal');
         return await res
@@ -49,14 +49,14 @@ class Hangman extends React.Component {
         this.setState({answer: (await this.getWord()).data[0].toUpperCase()})
     }
 
-    /** RESET GAME **/
+    /* RESET GAME */
     async resetGame(){
         this.setState({wrongNum: 0,
             guessed: new Set(),
             answer: (await this.getWord()).data[0].toUpperCase()})
     }
 
-    /** HANDLE GUESS **/
+    /* HANDLE GUESS */
     handleGuess(e){
         /* handle a guessed letter:
             * add letter to state.guessed
@@ -70,7 +70,7 @@ class Hangman extends React.Component {
         }))
     }
 
-    /** GUESSED WORD **/
+    /* GUESSED WORD */
     guessedWord() {
         /* show current state of word:
             * Show only right guessed letters
