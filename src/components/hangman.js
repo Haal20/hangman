@@ -15,6 +15,7 @@ import img6 from '../img/img6.png'
             * change class component to function component
             * move API call to own function and import
             * mage button to own component
+            * move render functionality to own function
 */
 
 class Hangman extends React.Component {
@@ -107,6 +108,7 @@ class Hangman extends React.Component {
 
     /* RENDER GAME */
     render () {
+        console.log(this.state.answer)
         return (
             <div>
                 <h1>Hangman Game</h1>
