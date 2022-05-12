@@ -1,3 +1,16 @@
+# Ditt uppdrag!
+ Vi vill att du bygger ett hänga-gubbe-spel som ska fungera i webbläsaren. Tanken är att användaren skall gissa på ett ord eller mening genom inmatning av en bokstav i taget.
+ När användaren gissar på en bokstav så ska det visa om gissningen är rätt eller fel. Du behöver använda dig av någon form av api för att hämta ord eller en mening. Exempel på api-tjänst för detta är https://random-words-api.vercel.app/word ( https://github.com/mcnaveen/Random-Words-API ) eller https://random-word-form.herokuapp.com/
+ Beskriv gärna också hur du tänkt kring uppgiften och strukturerat upp arbetet kring det
+ Vi ser helst att leverans av uppgiften sker genom länk till t.ex. github eller bitbucket.
+
+## Hur bedömer vi arbetet?
+* Kod
+* Arkitektur
+* Versionshantering
+* Dokumentation
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
