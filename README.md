@@ -1,5 +1,5 @@
 # Hangman
-This is a simple hangman game!
+This is a simple hangman game made for mobile first but works on pc.
 I'm using https://random-word-form.herokuapp.com/random/animal to get a random animal words.
 
 # Getting Started with this app
