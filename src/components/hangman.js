@@ -107,8 +107,6 @@ class Hangman extends React.Component {
 
     /* RENDER GAME */
     render () {
-        console.log(this.state.answer)
-        console.log(this.state.guessed)
         return (
             <div>
                 <h1>Hangman Game</h1>
