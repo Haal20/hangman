@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Button from '@mui/material/Button'
-import axios from "axios";
 import img0 from '../img/img0.png'
 import img1 from '../img/img1.png'
 import img2 from '../img/img2.png'
@@ -8,11 +7,11 @@ import img3 from '../img/img3.png'
 import img4 from '../img/img4.png'
 import img5 from '../img/img5.png'
 import img6 from '../img/img6.png'
+import { getWord } from "../data/randomAnimalApi";
 
 /* TODO:    * customise dificulty
             * add more pictures
             * 'Spice up' winning and losing credds
-            * move API call to own function and import
             * mage button to own component
             * move render functionality to own function
             * enable uting keyboarde
@@ -27,12 +26,6 @@ const Hangman = (props) => {
     const [wrongNum, setWrongNum] = useState(0)
     const [guessed, setGuessed] = useState([])
     const [answer, setAnswer] = useState('')
-
-    /* GET RANDOM WORD */
-    const getWord = async () => {
-        const res = await axios('https://random-word-form.herokuapp.com/random/animal');
-        return await res
-    }
 
     useEffect( () => {
         // declare the data fetching function
@@ -55,8 +48,8 @@ const Hangman = (props) => {
     /* HANDLE GUESS */
     const handleGuess = (e) => {
         /* handle a guessed letter:
-            * add letter to state.guessed
-            * if letter is not in state.answer, increase wrongNum
+            * add letter to guessed state
+            * if letter is not in answer state, increase wrongNum
         */
         let ltr = e.target.value
         console.log(ltr)
@@ -100,7 +93,6 @@ const Hangman = (props) => {
     }
 
     console.log(answer)
-    console.log(guessed)
     /* RENDER GAME */
         return (
             <div>
@@ -119,7 +111,6 @@ const Hangman = (props) => {
                     </div>
                 ))}
                 
-                <br/>
                 <Button variant="contained" onClick={resetGame}>Reset Game!</Button>
             </div>
         )
