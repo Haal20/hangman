@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { getWord } from "../data/randomAnimalApi";
 import Button from '@mui/material/Button'
 import img0 from '../img/img0.png'
 import img1 from '../img/img1.png'
@@ -7,14 +8,14 @@ import img3 from '../img/img3.png'
 import img4 from '../img/img4.png'
 import img5 from '../img/img5.png'
 import img6 from '../img/img6.png'
-import { getWord } from "../data/randomAnimalApi";
 
 /* TODO:    * customise dificulty
             * add more pictures
             * 'Spice up' winning and losing credds
-            * mage button to own component
-            * move render functionality to own function
+            * make button to own component
+            * move render functionality to function?
             * enable uting keyboarde
+            * if answer includes ' '. add directly to guessed
 */
 
 const Hangman = (props) => {
@@ -63,7 +64,7 @@ const Hangman = (props) => {
             * Show only right guessed letters
             * Use _ as plaseholder for the rest of the letters.
         */
-       return answer.split("").map(ltr => (guessed.includes(ltr) ? ltr : ' _ '))
+       return answer.split('').map(ltr => (guessed.includes(ltr) ? ltr : ' _ '))
     }
     
     /* GENERATE BUTTON ALPHABET */
@@ -91,8 +92,7 @@ const Hangman = (props) => {
 
         return renderBtn
     }
-
-    console.log(answer)
+    
     /* RENDER GAME */
         return (
             <div>
