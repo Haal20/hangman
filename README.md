@@ -1,6 +1,6 @@
 # Hangman
 This is a simple hangman game!
-I'm using https://random-word-form.herokuapp.com/random/animal to get a random animal word
+I'm using https://random-word-form.herokuapp.com/random/animal to get a random animal words.
 
 # Getting Started with this app
   This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
